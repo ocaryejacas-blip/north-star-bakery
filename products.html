@@ -1,123 +1,116 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>North Star Bakery | Products</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Star Bakery | Products</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+  <img src="images/bakery-logo.png" alt="North Star Bakery logo, a star above a loaf of bread">
+  <h1>Our Products</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" aria-current="page">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="products.html#favorites-section" class="fav-nav-link">Favorites (<span id="nav-fav-count">0</span>)</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo-link">
-        <img src="images/bakery-logo.png" alt="North Star Bakery logo">
-        <p class="site-title">North Star Bakery</p>
-      </a>
-      <nav class="main-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html" aria-current="page">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Our Products</h1>
-      <p>From everyday loaves to celebration cakes, everything is baked in small batches with simple, honest ingredients.</p>
-    </div>
+<main>
+  <section aria-labelledby="featured-product-heading">
+    <h2 id="featured-product-heading">This Week's Featured Bake</h2>
+    <picture>
+      <source media="(min-width: 700px)" srcset="images/bakery-feature-large.png">
+      <source media="(max-width: 699px)" srcset="images/bakery-feature-small.png">
+      <img src="images/bakery-feature-large.png" alt="Assorted fresh pastries and bread arranged on a bakery counter">
+    </picture>
+    <p>A rotating seasonal favorite, freshly baked daily and available while supplies last.</p>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <figure class="media-block">
-        <img src="images/bakery-bread.png" alt="A row of freshly baked breads cooling on a wooden rack">
-        <figcaption>A fresh batch, straight out of the oven.</figcaption>
-      </figure>
-    </div>
+  <section aria-labelledby="favorites-heading" id="favorites-section" class="favorites-box">
+    <h2 id="favorites-heading">My Favorites</h2>
+    <p>Tap "Add to Favorites" on any item below to build a list you can mention when you call, email, or fill out our <a href="contact.html">contact form</a> &mdash; your list is saved on this device so it's here next time you visit.</p>
+    <ul id="favorites-list" class="favorites-list">
+      <li id="no-favorites-message">You haven't added any favorites yet.</li>
+    </ul>
+    <button type="button" id="clear-favorites-btn" class="secondary-btn">Clear All Favorites</button>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <h2>Breads</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Classic Sourdough</h3>
-          <p>Naturally leavened, crackling crust, soft open crumb.</p>
-          <p class="price">$6 – $8</p>
-        </div>
-        <div class="card">
-          <h3>Whole Wheat Country Loaf</h3>
-          <p>Hearty and slightly nutty, great for sandwiches.</p>
-          <p class="price">$6 – $7</p>
-        </div>
-        <div class="card">
-          <h3>Baguette</h3>
-          <p>Crisp exterior, airy interior, baked twice daily.</p>
-          <p class="price">$4 – $5</p>
-        </div>
-      </div>
-    </div>
+  <section aria-labelledby="breads-heading">
+    <h2 id="breads-heading">Breads</h2>
+    <img src="images/bakery-bread.png" alt="A row of freshly baked artisan loaves on a wooden shelf">
+    <ul class="product-list">
+      <li class="product-card">
+        <h3>Classic Sourdough</h3>
+        <p>Naturally leavened, 24-hour proof, crisp crust. $7&ndash;$9.</p>
+        <button type="button" class="fav-btn" data-id="sourdough" data-name="Classic Sourdough" data-price="$7&ndash;$9">&#9734; Add to Favorites</button>
+      </li>
+      <li class="product-card">
+        <h3>Whole Wheat Country Loaf</h3>
+        <p>Hearty and slightly nutty, great for sandwiches. $6&ndash;$8.</p>
+        <button type="button" class="fav-btn" data-id="wheat-loaf" data-name="Whole Wheat Country Loaf" data-price="$6&ndash;$8">&#9734; Add to Favorites</button>
+      </li>
+      <li class="product-card">
+        <h3>Baguette</h3>
+        <p>Traditional French-style, baked twice daily. $4&ndash;$5.</p>
+        <button type="button" class="fav-btn" data-id="baguette" data-name="Baguette" data-price="$4&ndash;$5">&#9734; Add to Favorites</button>
+      </li>
+    </ul>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>Pastries</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Butter Croissant</h3>
-          <p>Laminated dough, baked golden every morning.</p>
-          <p class="price">$3 – $4</p>
-        </div>
-        <div class="card">
-          <h3>Cinnamon Roll</h3>
-          <p>Soft, spiced, and finished with cream cheese icing.</p>
-          <p class="price">$4 – $5</p>
-        </div>
-        <div class="card">
-          <h3>Seasonal Fruit Danish</h3>
-          <p>Changes with what's fresh at the local market.</p>
-          <p class="price">$4 – $6</p>
-        </div>
-      </div>
-    </div>
+  <section aria-labelledby="pastries-heading">
+    <h2 id="pastries-heading">Pastries</h2>
+    <ul class="product-list">
+      <li class="product-card">
+        <h3>Butter Croissants</h3>
+        <p>Laminated by hand each morning. $3&ndash;$4.</p>
+        <button type="button" class="fav-btn" data-id="croissant" data-name="Butter Croissants" data-price="$3&ndash;$4">&#9734; Add to Favorites</button>
+      </li>
+      <li class="product-card">
+        <h3>Cinnamon Rolls</h3>
+        <p>Warm, gooey, topped with cream cheese icing. $4&ndash;$5.</p>
+        <button type="button" class="fav-btn" data-id="cinnamon-roll" data-name="Cinnamon Rolls" data-price="$4&ndash;$5">&#9734; Add to Favorites</button>
+      </li>
+      <li class="product-card">
+        <h3>Seasonal Fruit Danish</h3>
+        <p>Rotating fruit fillings based on what's in season. $4&ndash;$5.</p>
+        <button type="button" class="fav-btn" data-id="danish" data-name="Seasonal Fruit Danish" data-price="$4&ndash;$5">&#9734; Add to Favorites</button>
+      </li>
+    </ul>
   </section>
 
-  <section class="section section-alt">
-    <div class="container">
-      <h2>Cakes</h2>
-      <div class="card-grid">
-        <div class="card">
-          <h3>Celebration Cake</h3>
-          <p>Custom flavors and simple, elegant decorating for birthdays and events.</p>
-          <p class="price">$35 – $65</p>
-        </div>
-        <div class="card">
-          <h3>Classic Layer Cake</h3>
-          <p>Vanilla, chocolate, or lemon — a crowd favorite by the slice or whole.</p>
-          <p class="price">$28 – $40</p>
-        </div>
-        <div class="card">
-          <h3>Mini Cupcakes (Dozen)</h3>
-          <p>Great for office celebrations or small gatherings.</p>
-          <p class="price">$18 – $22</p>
-        </div>
-      </div>
-      <p><em>Pricing ranges are estimates based on size and customization. No online checkout — please use our <a href="contact.html">contact form</a> to place a pre-order or ask a question.</em></p>
-    </div>
+  <section aria-labelledby="cakes-heading">
+    <h2 id="cakes-heading">Cakes</h2>
+    <ul class="product-list">
+      <li class="product-card">
+        <h3>Celebration Cakes</h3>
+        <p>Custom cakes for birthdays and special occasions. $35&ndash;$75, depending on size.</p>
+        <button type="button" class="fav-btn" data-id="celebration-cake" data-name="Celebration Cakes" data-price="$35&ndash;$75">&#9734; Add to Favorites</button>
+      </li>
+      <li class="product-card">
+        <h3>Wedding Cakes</h3>
+        <p>Tiered and customizable, consultation required. Pricing varies by design.</p>
+        <button type="button" class="fav-btn" data-id="wedding-cake" data-name="Wedding Cakes" data-price="Varies by design">&#9734; Add to Favorites</button>
+      </li>
+      <li class="product-card">
+        <h3>Everyday Slices</h3>
+        <p>By-the-slice cake available daily at the counter. $5&ndash;$6.</p>
+        <button type="button" class="fav-btn" data-id="slice" data-name="Everyday Slices" data-price="$5&ndash;$6">&#9734; Add to Favorites</button>
+      </li>
+    </ul>
+    <p>All orders can be placed online through our <a href="contact.html">contact page</a>; we do not offer in-page checkout.</p>
   </section>
+</main>
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 North Star Bakery. Baked with care in the Riverside District.</p>
-    </div>
-  </footer>
+<footer>
+  <p>&copy; 2026 North Star Bakery. 123 Maple Street, Riverside.</p>
+</footer>
 
+<script src="script.js"></script>
 </body>
 </html>

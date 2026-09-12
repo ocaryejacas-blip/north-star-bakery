@@ -1,116 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>North Star Bakery | Contact</title>
-  <link rel="stylesheet" href="css/styles.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Star Bakery | Contact</title>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<header>
+  <img src="images/bakery-logo.png" alt="North Star Bakery logo, a star above a loaf of bread">
+  <h1>Contact &amp; Pre-Orders</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html" aria-current="page">Contact</a></li>
+      <li><a href="products.html#favorites-section" class="fav-nav-link">Favorites (<span id="nav-fav-count">0</span>)</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="index.html" class="logo-link">
-        <img src="images/bakery-logo.png" alt="North Star Bakery logo">
-        <p class="site-title">North Star Bakery</p>
-      </a>
-      <nav class="main-nav" aria-label="Primary">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="contact.html" aria-current="page">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <section class="hero">
-    <div class="container">
-      <h1>Get In Touch</h1>
-      <p>Pre-order for pickup, ask a question, or just say hello. We'll get back to you within one business day.</p>
-    </div>
+<main>
+  <section aria-labelledby="location-heading">
+    <h2 id="location-heading">Location &amp; Hours</h2>
+    <p>123 Maple Street, Riverside</p>
+    <p>Open Tuesday&ndash;Sunday, 6:00 a.m.&ndash;3:00 p.m. Closed Mondays.</p>
   </section>
 
-  <section class="section">
-    <div class="container">
-      <h2>See What Happens Behind the Counter</h2>
-      <video controls width="100%" poster="images/bakery-storefront.png">
-        <source src="media/bakery-behind-scenes.mp4" type="video/mp4">
-        Your browser does not support the video element. Please contact us directly to hear more about our baking process — we're happy to walk you through it over the phone.
-      </video>
-    </div>
+  <section aria-labelledby="form-heading">
+    <h2 id="form-heading">Send Us an Inquiry or Pre-Order</h2>
+
+    <p id="form-success-message" class="success-message" hidden>
+      Thanks! Your request has been received. We'll be in touch soon.
+    </p>
+
+    <form action="#" method="post" id="contact-form" novalidate>
+      <fieldset>
+        <legend>Your Information</legend>
+        <p>
+          <label for="name">Full Name</label><br>
+          <input type="text" id="name" name="name" required minlength="2">
+          <span class="error-message" id="name-error" role="alert"></span>
+        </p>
+        <p>
+          <label for="email">Email Address</label><br>
+          <input type="email" id="email" name="email" required>
+          <span class="error-message" id="email-error" role="alert"></span>
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Request</legend>
+        <p>
+          <label for="request-type">Request Type</label><br>
+          <select id="request-type" name="request-type" required>
+            <option value="">-- Please choose one --</option>
+            <option value="preorder">Pre-Order</option>
+            <option value="general">General Question</option>
+          </select>
+          <span class="error-message" id="request-type-error" role="alert"></span>
+        </p>
+        <p>
+          <label for="pickup-date">Preferred Pickup Date</label><br>
+          <input type="date" id="pickup-date" name="pickup-date">
+          <span class="error-message" id="pickup-date-error" role="alert"></span>
+        </p>
+        <p>
+          <label for="item-details">Item Details</label><br>
+          <textarea id="item-details" name="item-details" rows="4" cols="40"
+            placeholder="e.g., one Signature Loaf and a dozen cinnamon rolls" required></textarea>
+          <span class="error-message" id="item-details-error" role="alert"></span>
+        </p>
+        <p>
+          <label for="allergy-notes">Allergy Notes (if applicable)</label><br>
+          <textarea id="allergy-notes" name="allergy-notes" rows="3" cols="40"
+            placeholder="Let us know about any allergies or dietary restrictions"></textarea>
+        </p>
+      </fieldset>
+
+      <p>
+        <button type="submit">Submit Request</button>
+      </p>
+    </form>
   </section>
+</main>
 
-  <section class="section section-alt">
-    <div class="container">
-      <h2>Pre-Order &amp; Inquiry Form</h2>
-      <form action="#" method="post">
-        <fieldset>
-          <legend>Your Information</legend>
+<footer>
+  <p>&copy; 2026 North Star Bakery. 123 Maple Street, Riverside.</p>
+</footer>
 
-          <div>
-            <label for="name">Full Name</label>
-            <input type="text" id="name" name="name" required>
-          </div>
-
-          <div>
-            <label for="email">Email Address</label>
-            <input type="email" id="email" name="email" required>
-          </div>
-        </fieldset>
-
-        <fieldset>
-          <legend>Order Details</legend>
-
-          <div>
-            <label for="pickup-date">Preferred Pickup Date</label>
-            <input type="date" id="pickup-date" name="pickup-date">
-          </div>
-
-          <div>
-            <label for="request-type">Request Type</label>
-            <select id="request-type" name="request-type">
-              <option value="pre-order">Pre-Order</option>
-              <option value="general-question">General Question</option>
-            </select>
-          </div>
-
-          <div>
-            <label for="item-details">Item Details</label>
-            <textarea id="item-details" name="item-details" rows="4" placeholder="Tell us what you'd like to order or ask about"></textarea>
-          </div>
-
-          <div>
-            <label for="allergy-notes">Allergy Notes (if applicable)</label>
-            <textarea id="allergy-notes" name="allergy-notes" rows="2" placeholder="Let us know about any allergies we should be aware of"></textarea>
-          </div>
-        </fieldset>
-
-        <button type="submit">Send Request</button>
-      </form>
-    </div>
-  </section>
-
-  <section class="section">
-    <div class="container">
-      <h2>Visit Us</h2>
-      <ul class="info-list">
-        <li><strong>Address:</strong> 14 Harbor Lane, Riverside District</li>
-        <li><strong>Monday – Friday:</strong> 6:00 AM – 6:00 PM</li>
-        <li><strong>Saturday – Sunday:</strong> 7:00 AM – 4:00 PM</li>
-        <li><strong>Phone:</strong> (555) 010-2938</li>
-      </ul>
-    </div>
-  </section>
-
-  <footer class="site-footer">
-    <div class="container">
-      <p>&copy; 2026 North Star Bakery. Baked with care in the Riverside District.</p>
-    </div>
-  </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
