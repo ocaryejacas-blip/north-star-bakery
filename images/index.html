@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>North Star Bakery | Home</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <img src="images/bakery-logo.png" alt="North Star Bakery logo, a star above a loaf of bread">
+  <h1>North Star Bakery</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html" aria-current="page">Home</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="products.html#favorites-section" class="fav-nav-link">Favorites (<span id="nav-fav-count">0</span>)</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main>
+  <section aria-labelledby="welcome-heading" class="hero">
+    <h2 id="welcome-heading">Welcome to North Star Bakery</h2>
+    <p>
+      Tucked into the heart of the neighborhood, North Star Bakery has been
+      baking fresh bread, pastries, and cakes for our community every
+      morning since sunrise. Whether you're grabbing a coffee and croissant
+      on your commute or ordering a cake for a family celebration, we're
+      glad you're here.
+    </p>
+    <p>Listen to a short welcome message from our head baker:</p>
+    <audio controls>
+      <source src="media/bakery-welcome.mp3" type="audio/mpeg">
+      Your browser does not support the audio element. You can
+      <a href="media/bakery-welcome.mp3">download the welcome message</a>
+      to listen instead. In it, our head baker greets visitors and shares
+      a bit about what makes North Star Bakery a neighborhood favorite.
+    </audio>
+  </section>
+
+  <section aria-labelledby="known-for-heading">
+    <h2 id="known-for-heading">What We're Known For</h2>
+    <p>
+      Our sourdough is proofed for over 24 hours, our pastries are laminated
+      by hand every morning, and our cakes are made to order for
+      birthdays, weddings, and every celebration in between. Locals know us
+      for our warm ovens, warmer welcomes, and the smell of fresh bread that
+      drifts down the block by 7 a.m.
+    </p>
+  </section>
+
+  <section aria-labelledby="hours-heading">
+    <h2 id="hours-heading">Hours &amp; Location</h2>
+    <p>123 Maple Street, Riverside &mdash; open Tuesday through Sunday, 6:00 a.m. to 3:00 p.m. Closed Mondays.</p>
+  </section>
+
+  <section aria-labelledby="featured-heading">
+    <h2 id="featured-heading">Featured Item of the Week</h2>
+    <figure>
+      <img src="images/bakery-signature-loaf.png"
+        alt="A golden-brown signature sourdough loaf with a scored crust, cooling on a wire rack">
+      <figcaption>Our Signature Loaf &mdash; a 24-hour proofed sourdough, back by popular demand this week.</figcaption>
+    </figure>
+    <p>Ask about pre-ordering the Signature Loaf for weekend pickup on our <a href="contact.html">contact page</a>.</p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2026 North Star Bakery. 123 Maple Street, Riverside.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
